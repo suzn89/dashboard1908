@@ -1,0 +1,123 @@
+@charset 'UTF-8';
+$darkBg : #2D3038;
+$grayBg : #3A3D45;
+$primaryColor: #127AB9;
+$lightGray: #EBEBEC;
+$inputTitle: #848991;
+$lightSky:#F5F6FA;
+.list {
+  .inputarea {
+    width: 100%;  
+    margin-bottom: 20px;
+    .label {
+      display:block;
+      margin-bottom: 5px;
+      color:$inputTitle;
+      font-weight: 600;
+    }  
+    &__select {
+      position: relative;
+      height: 35px;    
+      border:1px solid $inputTitle;    
+      &:after {
+        position:absolute;
+        font-family: 'iconfont';
+        content:'\e90a';            
+        right:10px;
+        top:2px;
+        font-size:20px;
+        color: $inputTitle;
+      }
+      select {
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        background: none;
+        color: $inputTitle;
+      }
+    }
+    &__text {
+      input{
+        width: 100%;
+        height: 35px;
+        font-size: 15px;
+        background: none;      
+        border: 1px solid $inputTitle;
+        padding: 5px 8px;
+        color: $inputTitle;
+      }    
+    }
+  }
+}
+
+.btnarea {
+  clear:both;
+  width: 100%;
+  margin-top: 20px;
+  a[class^="btn"] {
+    display: inline-block;
+    min-width: 80px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;    
+    text-align: center;
+  }
+  a[class^="btn"] + a[class^="btn"] {
+    margin-left: 10px;
+  }
+  .btn {    
+    &__search {      
+      color: #ffffff;
+    }
+    &__search {
+      background:$primaryColor;
+      color: #ffffff;
+      font-weight: 400;
+    }
+    &__big {
+      width: 100%;
+      height: 35px;
+    }
+    &__small {
+      height: 22px;
+      line-height: 22px;
+      border: 1px solid $primaryColor;
+      font-weight: normal;
+      color: $primaryColor;
+    }
+    &__primary {      
+      color: #ffffff;
+      font-weight: 500;
+      background: $primaryColor;
+    }
+    &__text {
+      background:none;      
+      font-weight: 500;
+      color: #A40A0A;
+    }
+  }
+}
+
+
+.w50 {
+  display: inline-block;
+  width: 208px !important;
+  padding-right: 10px;
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.pr0 {
+  padding-right: 0 !important;
+}
+.align__center {
+  text-align: center;
+}
+.align__right {
+  text-align: right;
+}
+.align__left {
+  text-align: left;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>대상자관리화면</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/layout.css">  
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <script src="js/animate.js"></script>
+</head>
+<body>
+  <header id="header" class="header">
+    <nav>
+      <ul class="menu">
+        <li><a href="#"><i class="icon-baseline-swap_horiz-24px"></i>Mapping</a></li>
+        <li class="on"><a href="#"><i class="icon-baseline-perm_contact_calendar-24px"></i>Manage</a></li> <!-- 메뉴 활성화시 li에 on 클래스 추가-->
+      </ul>
+    </nav>
+    <h1><a href="#"><img src="images/logo.png" alt="ai-box"></a></h1>
+    <ul class="navright">
+      <li class="navright__date">DATE <span>2019-06-18 WED 11:02:18</span></li>
+      <li class="navright__refresh"><a href="#">Refresh</a></li>
+    </ul>
+  </header>
+  <section id="managewrap">
+    <div class="list">
+      <div class="list__search">
+        <h2>대상자 조회</h2>
+        <div class="inputarea w50">
+          <span class="label">
+            부서
+          </span>
+          <div class="inputarea__select">
+            <select name="" id="" title="해당항목선택">
+              <option value="">Select All</option>
+              <option value="">Team A</option>
+              <option value="">Team B</option>
+              <option value="">Team C</option>              
+            </select>   
+          </div>          
+        </div> <!-- // inputarea 끝-->
+        <div class="inputarea w50 pr0">
+          <span class="label">
+            대상자
+          </span>
+          <div class="inputarea__text">
+            <input type="text" title="" name="" id="">
+          </div>          
+        </div> <!-- // inputarea 끝-->
+        <div class="inputarea w50">
+          <span class="label">
+            보고자
+          </span>
+          <div class="inputarea__text">
+            <input type="text" title="" name="" id="">
+          </div>          
+        </div> <!-- // inputarea 끝-->
+        <div class="inputarea w50 pr0">
+          <span class="label">
+            식별번호
+          </span>
+          <div class="inputarea__text">
+            <input type="text" title="" name="" id="">
+          </div>          
+        </div> <!-- // inputarea 끝-->
+
+        <div class="btnarea align__right mt0">
+          <a href="#" class="btn__search btn__big">SEARCH</a>
+        </div>
+
+      </div> <!-- // list__search -->
+
+      <div class="list__userlist">        
+        <div class="btnarea align__right mt0">
+          <span class="result">전체<i>20</i>건</span>
+          <a href="#" class="btn__small">ADD</a>
+        </div>
+        
+        <div class="list__users">
+          <ul>
+            <li class="select"> <!-- 선택하면 select 클래스 추가-->
+              <a href="#" class="nametitle">Louis Yoelin <span>(010-5555-5555)</span></a>
+              <span class="profile noimage"><img src="#" alt="" width="130" height="100"></span> <!-- 이미지 없으면 noimage 클래스 추-->
+              <dl>
+                <dt>Team</dt>
+                <dd>LAB 1</dd>
+                <dt>ID Number</dt>
+                <dd>156879746</dd>
+                <dt>보고자</dt>
+                <dd>Tome Holland<span>(010-6565-5959)</span></dd>
+              </dl>
+            </li> <!-- 사용자 한묶음 끝 -->
+
+            <li>
+              <a href="#" class="nametitle">Louis Yoelin <span>(010-5555-5555)</span></a>
+              <span class="profile noimage"><img src="#" alt="" width="130" height="100"></span> <!-- 이미지 없으면 noimage 클래스 추-->
+              <dl>
+                <dt>Team</dt>
+                <dd>LAB 1</dd>
+                <dt>ID Number</dt>
+                <dd>156879746</dd>
+                <dt>보고자</dt>
+                <dd>Tome Holland<span>(010-6565-5959)</span></dd>
+              </dl>
+            </li> <!-- 사용자 한묶음 끝 -->
+            <li>
+              <a href="#" class="nametitle">Louis Yoelin <span>(010-5555-5555)</span></a>
+              <span class="profile noimage"><img src="#" alt="" width="130" height="100"></span> <!-- 이미지 없으면 noimage 클래스 추-->
+              <dl>
+                <dt>Team</dt>
+                <dd>LAB 1</dd>
+                <dt>ID Number</dt>
+                <dd>156879746</dd>
+                <dt>보고자</dt>
+                <dd>Tome Holland<span>(010-6565-5959)</span></dd>
+              </dl>
+            </li> <!-- 사용자 한묶음 끝 -->
+            <li>
+              <a href="#" class="nametitle">Louis Yoelin <span>(010-5555-5555)</span></a>
+              <span class="profile noimage"><img src="#" alt="" width="130" height="100"></span> <!-- 이미지 없으면 noimage 클래스 추-->
+              <dl>
+                <dt>Team</dt>
+                <dd>LAB 1</dd>
+                <dt>ID Number</dt>
+                <dd>156879746</dd>
+                <dt>보고자</dt>
+                <dd>Tome Holland<span>(010-6565-5959)</span></dd>
+              </dl>
+            </li> <!-- 사용자 한묶음 끝 -->
+            <li>
+              <a href="#" class="nametitle">Louis Yoelin <span>(010-5555-5555)</span></a>
+              <span class="profile noimage"><img src="#" alt="" width="130" height="100"></span> <!-- 이미지 없으면 noimage 클래스 추-->
+              <dl>
+                <dt>Team</dt>
+                <dd>LAB 1</dd>
+                <dt>ID Number</dt>
+                <dd>156879746</dd>
+                <dt>보고자</dt>
+                <dd>Tome Holland<span>(010-6565-5959)</span></dd>
+              </dl>
+            </li> <!-- 사용자 한묶음 끝 -->
+            <li>
+              <a href="#" class="nametitle">Louis Yoelin <span>(010-5555-5555)</span></a>
+              <span class="profile noimage"><img src="#" alt="" width="130" height="100"></span> <!-- 이미지 없으면 noimage 클래스 추-->
+              <dl>
+                <dt>Team</dt>
+                <dd>LAB 1</dd>
+                <dt>ID Number</dt>
+                <dd>156879746</dd>
+                <dt>보고자</dt>
+                <dd>Tome Holland<span>(010-6565-5959)</span></dd>
+              </dl>
+            </li> <!-- 사용자 한묶음 끝 -->
+            <li>
+              <a href="#" class="nametitle">Louis Yoelin <span>(010-5555-5555)</span></a>
+              <span class="profile noimage"><img src="#" alt="" width="130" height="100"></span> <!-- 이미지 없으면 noimage 클래스 추-->
+              <dl>
+                <dt>Team</dt>
+                <dd>LAB 1</dd>
+                <dt>ID Number</dt>
+                <dd>156879746</dd>
+                <dt>보고자</dt>
+                <dd>Tome Holland<span>(010-6565-5959)</span></dd>
+              </dl>
+            </li> <!-- 사용자 한묶음 끝 -->
+            
+          </ul>
+        </div> <!-- // list__users -->
+
+      </div> <!-- // list__userlist -->
+
+    </div> <!-- // list -->
+
+    <div class="content first"> <!-- 첫화면은 first class 추가-->
+      <div class="watermark">
+        <img src="images/watermark.png" alt="">
+        <p>대상자를 선택해주세요.</p>
+      </div>
+    </div> <!-- // content -->
+    
+  </section> <!-- // wrap end -->
+</html>

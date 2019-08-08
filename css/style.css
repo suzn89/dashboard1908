@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'iconfont';
+  src:  url('../fonts/iconfont.eot?g0jo3d');
+  src:  url('../fonts/iconfont.eot?g0jo3d#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont.ttf?g0jo3d') format('truetype'),
+    url('../fonts/iconfont.woff?g0jo3d') format('woff'),
+    url('../fonts/iconfont.svg?g0jo3d#iconfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconfont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-baseline-add-24px:before {
+  content: "\e900";
+}
+.icon-baseline-cached-24px:before {
+  content: "\e901";
+}
+.icon-baseline-chevron_left-24px:before {
+  content: "\e902";
+}
+.icon-baseline-chevron_right-24px:before {
+  content: "\e903";
+}
+.icon-baseline-close-24px:before {
+  content: "\e904";
+}
+.icon-baseline-create-24px:before {
+  content: "\e905";
+}
+.icon-baseline-done_outline-24px:before {
+  content: "\e906";
+}
+.icon-baseline-event-24px:before {
+  content: "\e907";
+}
+.icon-baseline-exit_to_app-24px:before {
+  content: "\e908";
+}
+.icon-baseline-expand_less-24px:before {
+  content: "\e909";
+}
+.icon-baseline-expand_more-24px:before {
+  content: "\e90a";
+}
+.icon-baseline-first_page-24px:before {
+  content: "\e90b";
+}
+.icon-baseline-last_page-24px:before {
+  content: "\e90c";
+}
+.icon-baseline-more_horiz-24px:before {
+  content: "\e90d";
+}
+.icon-baseline-perm_contact_calendar-24px:before {
+  content: "\e90e";
+}
+.icon-baseline-schedule-24px:before {
+  content: "\e90f";
+}
+.icon-baseline-search-24px:before {
+  content: "\e910";
+}
+.icon-baseline-swap_horiz-24px:before {
+  content: "\e911";
+}
+.icon-outline-delete_forever-24px:before {
+  content: "\e912";
+}
