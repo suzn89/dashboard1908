@@ -18,15 +18,30 @@ $(function() {
   });
 });
 
-// mapping 폴더 가로 계산
-$(function() {
-  var folderWidth = $('.content').width();  
-  $('.photos').css('width', folderWidth - 370);  
-  $(window).resize(function(){
-    var folderWidth = $('.content').width();  
-    $('.photos').css('width', folderWidth - 370);  
+$(function(){ 
+  panelOpen = true;
+  var contentWidth = $('.content').width();
+  $('.infomation__btn').click(function (e) { 
+    e.preventDefault();
+    if (panelOpen) {
+      $(this).addClass('panelshow');
+      $('.infomation').stop(true,true).animate({'left':'0px'},500,function(){        
+        $('.photos').addClass('withpanel');
+        $('.withpanel').css('width', contentWidth - 370); 
+        panelOpen=false;
+      });      
+    } else {      
+      $(this).removeClass('panelshow');
+      $('.infomation').stop(true,true).animate({'left':'-370px'},500,function(){        
+        $('.photos').removeClass('withpanel');
+        $('.photos').css('width', contentWidth); 
+        panelOpen=true;
+      });
+    }
   });
 });
+
+
 
 
 

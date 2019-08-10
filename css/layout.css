@@ -255,6 +255,7 @@ header.header .navright li.navright__refresh:hover a {
   width: 450px;
   min-height: 873px;
   background: #3A3D45;
+  z-index: 999;
 }
 
 #managewrap .list__search {
@@ -271,7 +272,7 @@ header.header .navright li.navright__refresh:hover a {
 
 #managewrap .list__userlist {
   width: 100%;
-  height: calc(100vh - 365px);
+  height: calc(100vh - 287px);
   padding: 15px;
   border-bottom: 1px solid #2D3038;
 }
@@ -289,7 +290,7 @@ header.header .navright li.navright__refresh:hover a {
 
 #managewrap .list__users {
   margin-top: 10px;
-  height: calc(100vh - 438px);
+  height: calc(100vh - 358px);
   min-height: 522px;
   overflow-y: scroll;
 }
@@ -382,12 +383,15 @@ header.header .navright li.navright__refresh:hover a {
 }
 
 #managewrap .content .infomation {
-  float: left;
+  display: inline-block;
+  position: relative;
+  left: 0;
   width: 370px;
   height: 100%;
   padding: 18px 15px 0px 15px;
   min-height: 873px;
   background: #F5F6FA;
+  z-index: 200;
 }
 
 #managewrap .content .infomation h2 {
@@ -466,11 +470,46 @@ header.header .navright li.navright__refresh:hover a {
   margin-right: 4px;
 }
 
+#managewrap .content .infomation__btn {
+  display: block;
+  width: 20px;
+  height: 70px;
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  margin-top: -35px;
+  padding-right: 5px;
+  background: #F5F6FA;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  text-align: right;
+  line-height: 70px;
+  font-size: 17px;
+  color: #848991;
+  z-index: 500;
+}
+
+#managewrap .content .infomation__btn:after {
+  font-family: 'iconfont';
+  content: '\e903';
+}
+
+#managewrap .content .infomation .infomation__btn.panelshow:after {
+  font-family: 'iconfont';
+  content: '\e902';
+}
+
 #managewrap .content .photos {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
   overflow: hidden;
   width: 100%;
-  float: left;
+  z-index: 100;
   padding: 18px 15px 0px 15px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 #managewrap .content .photos h2 {
@@ -527,6 +566,30 @@ header.header .navright li.navright__refresh:hover a {
   font-size: 16px;
 }
 
+#managewrap .content .photos .period .inputarea__select {
+  position: relative;
+  width: 120px;
+  height: 35px;
+  margin-right: 5px;
+  float: left;
+}
+
+#managewrap .content .photos .period .inputarea__select select {
+  padding: 8px 10px;
+  width: 100%;
+  height: 100%;
+}
+
+#managewrap .content .photos .period .inputarea__select:after {
+  position: absolute;
+  font-family: 'iconfont';
+  content: '\e90a';
+  right: 10px;
+  top: 2px;
+  font-size: 20px;
+  color: #848991;
+}
+
 #managewrap .content .photos .period .from {
   float: left;
   margin: 0 4px;
@@ -577,6 +640,12 @@ header.header .navright li.navright__refresh:hover a {
 
 #managewrap .content .photos .folder .pic a:hover span {
   display: none;
+}
+
+#managewrap .content .withpanel {
+  left: 370px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 #managewrap .content .modal {
@@ -675,6 +744,16 @@ header.header .navright li.navright__refresh:hover a {
 #managewrap .content .modal .popup .btnarea {
   padding: 15px;
   margin-top: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#managewrap .content.panelhide .infomation {
+  left: -370px;
+}
+
+#managewrap .content.panelshow .infomation {
+  left: 0px;
 }
 
 #managewrap .content.first .watermark {

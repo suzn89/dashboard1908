@@ -260,6 +260,7 @@ header.header {
     width: 450px;
     min-height: 873px;
     background: $grayBg;
+    z-index:999;
     &__search {
       padding: 18px 15px 30px 15px;
       border-bottom: 1px solid #464A54;
@@ -272,7 +273,7 @@ header.header {
     }
     &__userlist {
       width: 100%;
-      height: calc(100vh - 365px);
+      height: calc(100vh - 287px);
       padding: 15px;
       border-bottom: 1px solid #2D3038;
       .result {
@@ -287,7 +288,7 @@ header.header {
     }
     &__users {
       margin-top: 10px;
-      height: calc(100vh - 438px);
+      height: calc(100vh - 358px);
       min-height: 522px;      
       overflow-y: scroll;
       ul {
@@ -370,12 +371,15 @@ header.header {
     min-height: 873px;
     background: #ffffff;
     .infomation {
-      float: left;
+      display: inline-block;
+      position: relative;
+      left: 0;      
       width: 370px;
       height: 100%;
       padding: 18px 15px 0px 15px;
       min-height: 873px;
       background: $lightSky;
+      z-index:200;
       h2 {        
         margin-bottom: 15px;
         font-size: 20px;
@@ -446,12 +450,45 @@ header.header {
           }
         }
       }
-    }
+      &__btn {
+        display: block;
+        width: 20px;
+        height: 70px;
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        margin-top: -35px;
+        padding-right: 5px;
+        background: $lightSky;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        text-align: right;
+        line-height: 70px;
+        font-size: 17px;
+        color: $inputTitle;
+        z-index:500;
+        &:after {
+          font-family: 'iconfont';
+          content: '\e903'
+        }
+      }
+      .infomation__btn.panelshow {
+        &:after {
+          font-family: 'iconfont';
+          content: '\e902'
+        }        
+      }
+    }    
     .photos {
+      display:inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
       overflow: hidden;
       width: 100%;
-      float: left;
+      z-index:100;
       padding: 18px 15px 0px 15px;
+      transition: all 1s;
       h2 {        
         margin-bottom: 15px;
         font-size: 20px;
@@ -497,6 +534,27 @@ header.header {
               font-size: 16px;
             }
             
+          }
+        }
+        .inputarea__select {
+          position: relative;
+          width: 120px;
+          height: 35px;
+          margin-right: 5px;
+          float:left;
+          select {
+            padding: 8px 10px;
+            width: 100%;
+            height: 100%;
+          }
+          &:after {
+            position:absolute;
+            font-family: 'iconfont';
+            content:'\e90a';            
+            right:10px;
+            top:2px;
+            font-size:20px;            
+            color: $inputTitle;
           }
         }
         .from {
@@ -546,6 +604,10 @@ header.header {
           }
         }
       }
+    }
+    .withpanel {
+      left: 370px;
+      transition: all 1s;
     }
     .modal {
       position: fixed;
@@ -632,8 +694,20 @@ header.header {
         .btnarea {
           padding: 15px;
           margin-top: 0;
+          font-size: 15px;          
+          font-weight: 600;
         }
       }
+    }
+  }
+  .content.panelhide {
+    .infomation {
+      left:-370px; 
+    }
+  }
+  .content.panelshow {
+    .infomation {
+      left:0px; 
     }
   }
   .content.first {
