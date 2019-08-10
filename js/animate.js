@@ -61,6 +61,18 @@ $(function() {
   });
 });
 
+// mapping 화면 유저 히스토리 열기/닫ㄱㅣ
+$(function(){ // mapping modal
+  var mappingWidth = $('body').width();
+  $('.pic > a').on('click',function(){
+    $('.mappinglist').css('width', mappingWidth - 480);
+    $('.userdetale').css('right', '0');    
+  });
+  $('.detale-hide').on('click',function(){
+    $('.userdetale').css('right', '-450px');
+    $('.mappinglist').css('width', mappingWidth - 30);    
+  });
+});
 
 
 $(function(){ // mapping modal

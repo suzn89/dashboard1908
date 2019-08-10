@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>대상자관리화면</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/layout.css">  
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <script src="js/animate.js"></script>
+</head>
+<body>
+  <header id="header" class="header">
+    <nav>
+      <ul class="menu">
+        <li class="on"><a href="#"><i class="icon-baseline-swap_horiz-24px"></i>Mapping</a></li>
+        <li><a href="#"><i class="icon-baseline-perm_contact_calendar-24px"></i>Manage</a></li> <!-- 메뉴 활성화시 li에 on 클래스 추가-->
+      </ul>
+    </nav>
+    <h1><a href="#"><img src="images/logo.png" alt="ai-box"></a></h1>
+    <ul class="navright">
+      <li class="navright__date">DATE <span>2019-06-18 WED 11:02:18</span></li>
+      <li class="navright__refresh"><a href="#">Refresh</a></li>
+    </ul>
+  </header>
+  <section id="managewrap">
+    <div class="mappinglist">
+      <div class="mappinglist__top">
+        <h2>대상자 조회</h2>
+
+        <div class="search">
+          <div class="inputarea">
+            <span class="label">
+              부서
+            </span>
+            <div class="inputarea__text">
+              <input type="text" title="" name="" id="">
+            </div>          
+          </div> <!-- // inputarea 끝-->
+          <div class="inputarea">
+            <span class="label">
+              대상자
+            </span>
+            <div class="inputarea__text">
+              <input type="text" title="" name="" id="">
+            </div>          
+          </div> <!-- // inputarea 끝-->
+          <a href="#" class="btn__search">SEARCH</a>
+        </div>
+
+      </div> <!-- // mappinglist__top -->
+
+      <div class="mappinglist__folder">
+        <div class="pic">
+          <a href="#">
+            <ul>
+              <li>LAB 01</li>
+              <li>Hong gildong</li>
+            </ul>
+            <img src="images/pic.png" alt="">
+          </a>
+        </div> <!-- 이미지 삽입 영역-->
+        <div class="pic">
+          <a href="#">
+            <ul>
+              <li>LAB 01</li>
+              <li>Hong gildong</li>
+            </ul>
+            <img src="images/pic.png" alt="">
+          </a>
+        </div> <!-- 이미지 삽입 영역-->        
+        
+      </div><!-- // mappinglist__folder -->
+
+      <div class="mappinglist__photo">
+        <div class="pic">
+          <img src="images/pic.png" alt="">
+        </div> <!-- 이미지 삽입 영역-->                    
+      </div> <!-- // mappinglist__photo -->
+
+    </div> <!-- // mappinglist -->
+
+    <div class="userdetale">
+      <div class="userdetale__top">
+        <span class="name">Louis Yoelin</span>
+        <span class="team">LAB 01</span>
+        <a href="#" class="detale-hide"><i class="icon-baseline-close-24px"></i></a>
+      </div>
+
+      <div class="userdetale__history">
+        <div class="pic">
+          <img src="images/pic.png" alt="">
+        </div> <!-- 이미지 삽입 영역-->        
+      </div>
+
+      <div class="userdetale__info">
+        <div class="inputarea">
+          <span class="label">
+            부서
+          </span>
+          <div class="inputarea__select">
+            <select name="" id="" title="해당항목선택">
+              <option value="">Select All</option>
+              <option value="">Team A</option>
+              <option value="">Team B</option>
+              <option value="">Team C</option>              
+            </select>   
+          </div>         
+        </div> <!-- // inputarea 끝-->
+        <div class="inputarea">
+          <span class="label">
+            이름
+          </span>
+          <div class="inputarea__text">
+            <input type="text" title="" name="" id="">
+          </div>          
+        </div> <!-- // inputarea 끝-->
+        <div class="inputarea">
+          <span class="label">
+            식별번호
+          </span>
+          <div class="inputarea__text">
+            <input type="text" title="" name="" id="">
+          </div>          
+        </div> <!-- // inputarea 끝-->
+
+        <div class="btnarea align__right mt0">
+          <a href="#" class="btn__search btn__big">신규등록</a>
+        </div>
+
+      </div> <!-- // userdetale__info  -->
+
+    </div> <!-- // userdetale -->
+
+  </section> <!-- // wrap end -->
+</html>
