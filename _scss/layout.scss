@@ -1,7 +1,4 @@
 @charset 'UTF-8';
-@import url(reset.css);
-@import url(style.css);
-
 $darkBg : #2D3038;
 $grayBg : #3A3D45;
 $primaryColor: #127AB9;
@@ -135,7 +132,7 @@ $lightSky:#F5F6FA;
 body {
   width: 100%;
   min-width: 1200px;
-  min-height: 960px;  
+  min-height: 930px;  
   background: $darkBg;
   overflow: auto;  
 }
@@ -252,18 +249,20 @@ header.header {
 #managewrap {
   position: relative;
   margin: 3px 15px 0px 15px;
-  min-height: 878px;
-  overflow-x:hidden;
+  min-height: 847px;
+  height: calc(100vh - 83px);
+  overflow:hidden;
   .list {
     position: absolute;
     left: 0px;
     top: 0; 
     width: 450px;
-    min-height: 873px;
+    height: calc(100vh - 83px);
+    min-height: 860px;
     background: $grayBg;
     z-index:999;
     &__search {
-      padding: 18px 15px 30px 15px;
+      padding: 18px 15px 15px 15px;
       border-bottom: 1px solid #464A54;
       h2 {
         margin-bottom: 15px;
@@ -274,9 +273,8 @@ header.header {
     }
     &__userlist {
       width: 100%;
-      height: calc(100vh - 287px);
-      padding: 15px;
-      border-bottom: 1px solid #2D3038;
+      height: calc(100vh - 245px);
+      padding: 15px;      
       .result {
         float: left;
         margin-top: 11px;
@@ -289,7 +287,7 @@ header.header {
     }
     &__users {
       margin-top: 10px;
-      height: calc(100vh - 358px);
+      height: calc(100vh - 310px);
       min-height: 522px;      
       overflow-y: scroll;
       ul {
@@ -368,17 +366,17 @@ header.header {
     left: 460px;
     top: 0;        
     float: left;    
-    height: calc(100vh - 87px);
-    min-height: 873px;
-    background: #ffffff;
+    height: calc(100vh - 83px);
+    min-height: 860px;
+    background: #ffffff;    
     .infomation {
       display: inline-block;
-      position: relative;
+      position: relative;      
       left: 0;      
       width: 370px;
       height: 100%;
       padding: 18px 15px 0px 15px;
-      min-height: 873px;
+      min-height: 860px;
       background: $lightSky;
       z-index:200;
       h2 {        
@@ -392,7 +390,7 @@ header.header {
         .label {
           color: $inputTitle;
           display: block;
-          margin-bottom: 5px;
+          margin-bottom: 2px;
         }
         &__text {
           input{
@@ -558,6 +556,15 @@ header.header {
             color: $inputTitle;
           }
         }
+        .inputarea__month {
+          float:left;
+          input {
+            height: 35px;
+            padding: 5px 0px 5px 8px;
+            border: 1px solid #EBEBEC;
+            color: $inputTitle;
+          }          
+        }
         .from {
           float:left;
           margin: 0 4px;
@@ -580,7 +587,7 @@ header.header {
       }
       .folder {
         height: calc(100vh - 235px);
-        min-height: 725px;                
+        min-height: 705px;                
         margin-top: 10px;
         overflow-y:scroll;
         .pic {
@@ -602,6 +609,10 @@ header.header {
           }
           a:hover span {
             display:none;
+          }
+          img {
+            width:130px;
+            height:100px;
           }
         }
       }
@@ -677,6 +688,10 @@ header.header {
             a:hover ul {
               display:block;
             }
+            img {
+              width: 130px;
+              height:100px;
+            }
           }
           .pic.select {
             &:before{
@@ -737,7 +752,7 @@ header.header {
   width: calc(100vw - 30px);
   height: calc(100vh - 80px);
   min-width: 710px;
-  min-height: 889px;
+  min-height: 847px;
   padding: 18px 15px 0 15px;
   background: $grayBg;
   transition: all 1s;
@@ -785,6 +800,10 @@ header.header {
         display:block;
         width: 130px;
         height: 100px;
+        img {
+          width: 130px;
+          height: 100px;
+        }
       }
       ul {
         position: absolute;
@@ -804,7 +823,7 @@ header.header {
     margin-top: 20px;
     padding: 10px 0;
     border-top: 1px solid #2D3038;
-    min-height: 460px;
+    min-height: 440px;
     overflow-y: scroll;
     height: calc(100vh - 500px);
     .pic {
@@ -814,6 +833,16 @@ header.header {
       height: 100px;
       margin: 3px;
       border: 1px solid $darkBg;
+    }
+    .pic.select:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 130px;
+      height: 100px;
+      z-index: 100;
+      border: 3px solid #A40A0A;      
     }
   }
   .inputarea {
@@ -875,7 +904,7 @@ header.header {
     }
   }
   &__history {
-    min-height: 550px;
+    min-height: 530px;
     overflow-y: scroll;
     height: calc(100vh - 420px);
     .pic {
@@ -887,6 +916,19 @@ header.header {
       img {
         width: 120px;
       }
+    }
+    .pic.select {
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 120px;
+        height: 92px;
+        z-index: 100;
+        border: 3px solid #A40A0A;
+        background: rgba(0, 0, 0, 0.3);
+      }            
     }
   }
   &__info {
@@ -901,7 +943,7 @@ header.header {
       .label {
         color: $inputTitle;
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 2px;
       }
       &__text {
         input{

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>대상자관리화면</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/layout.css">  
   <script src="js/jquery-2.2.4.min.js"></script>
@@ -49,11 +51,6 @@
             <input type="text" title="" name="" id="">
           </div>          
         </div> <!-- // inputarea 끝-->
-
-        <div class="btnarea align__right mt0">
-          <a href="#" class="btn__search btn__big">SEARCH</a>
-        </div>
-
       </div> <!-- // list__search -->
 
       <div class="list__userlist">        
@@ -280,24 +277,14 @@
             <span class="label">
               Period Setting
             </span>
-            <div class="inputarea__select">
-              <select name="" id="" title="해당항목선택">
-                <option value="">2019</option>             
-                <option value="">2019</option>             
-                <option value="">2019</option>             
-                <option value="">2019</option>             
-              </select>   
-            </div>         
-            <div class="inputarea__select">
-              <select name="" id="" title="해당항목선택">
-                <option value="">01</option>                
-                <option value="">02</option>                
-                <option value="">03</option>                
-                <option value="">04</option>                
-                <option value="">05</option>                
-                <option value="">06</option>                
-              </select>   
-            </div>         
+            <div class="inputarea">
+              <span class="label">
+                이름
+              </span>
+              <div class="inputarea__month">
+                <input type="month" title="" name="" id="">
+              </div>          
+            </div> <!-- // inputarea 끝-->            
             <a href="#" class="btn__search">Search</a>
           </div> <!-- // inputarea 끝-->
           

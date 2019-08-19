@@ -1,5 +1,3 @@
-@import url(reset.css);
-@import url(style.css);
 /* mixin */
 .login {
   width: 100vw;
@@ -115,7 +113,7 @@
 body {
   width: 100%;
   min-width: 1200px;
-  min-height: 960px;
+  min-height: 930px;
   background: #2D3038;
   overflow: auto;
 }
@@ -245,8 +243,9 @@ header.header .navright li.navright__refresh:hover a {
 #managewrap {
   position: relative;
   margin: 3px 15px 0px 15px;
-  min-height: 878px;
-  overflow-x: hidden;
+  min-height: 847px;
+  height: calc(100vh - 83px);
+  overflow: hidden;
 }
 
 #managewrap .list {
@@ -254,13 +253,14 @@ header.header .navright li.navright__refresh:hover a {
   left: 0px;
   top: 0;
   width: 450px;
-  min-height: 873px;
+  height: calc(100vh - 83px);
+  min-height: 860px;
   background: #3A3D45;
   z-index: 999;
 }
 
 #managewrap .list__search {
-  padding: 18px 15px 30px 15px;
+  padding: 18px 15px 15px 15px;
   border-bottom: 1px solid #464A54;
 }
 
@@ -273,9 +273,8 @@ header.header .navright li.navright__refresh:hover a {
 
 #managewrap .list__userlist {
   width: 100%;
-  height: calc(100vh - 287px);
+  height: calc(100vh - 245px);
   padding: 15px;
-  border-bottom: 1px solid #2D3038;
 }
 
 #managewrap .list__userlist .result {
@@ -291,7 +290,7 @@ header.header .navright li.navright__refresh:hover a {
 
 #managewrap .list__users {
   margin-top: 10px;
-  height: calc(100vh - 358px);
+  height: calc(100vh - 310px);
   min-height: 522px;
   overflow-y: scroll;
 }
@@ -378,8 +377,8 @@ header.header .navright li.navright__refresh:hover a {
   left: 460px;
   top: 0;
   float: left;
-  height: calc(100vh - 87px);
-  min-height: 873px;
+  height: calc(100vh - 83px);
+  min-height: 860px;
   background: #ffffff;
 }
 
@@ -390,7 +389,7 @@ header.header .navright li.navright__refresh:hover a {
   width: 370px;
   height: 100%;
   padding: 18px 15px 0px 15px;
-  min-height: 873px;
+  min-height: 860px;
   background: #F5F6FA;
   z-index: 200;
 }
@@ -409,7 +408,7 @@ header.header .navright li.navright__refresh:hover a {
 #managewrap .content .infomation .inputarea .label {
   color: #848991;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 #managewrap .content .infomation .inputarea__text input {
@@ -591,6 +590,17 @@ header.header .navright li.navright__refresh:hover a {
   color: #848991;
 }
 
+#managewrap .content .photos .period .inputarea__month {
+  float: left;
+}
+
+#managewrap .content .photos .period .inputarea__month input {
+  height: 35px;
+  padding: 5px 0px 5px 8px;
+  border: 1px solid #EBEBEC;
+  color: #848991;
+}
+
 #managewrap .content .photos .period .from {
   float: left;
   margin: 0 4px;
@@ -614,7 +624,7 @@ header.header .navright li.navright__refresh:hover a {
 
 #managewrap .content .photos .folder {
   height: calc(100vh - 235px);
-  min-height: 725px;
+  min-height: 705px;
   margin-top: 10px;
   overflow-y: scroll;
 }
@@ -641,6 +651,11 @@ header.header .navright li.navright__refresh:hover a {
 
 #managewrap .content .photos .folder .pic a:hover span {
   display: none;
+}
+
+#managewrap .content .photos .folder .pic img {
+  width: 130px;
+  height: 100px;
 }
 
 #managewrap .content .withpanel {
@@ -730,6 +745,11 @@ header.header .navright li.navright__refresh:hover a {
   display: block;
 }
 
+#managewrap .content .modal .popup__content .pic img {
+  width: 130px;
+  height: 100px;
+}
+
 #managewrap .content .modal .popup__content .pic.select:before {
   content: '';
   position: absolute;
@@ -781,7 +801,7 @@ header.header .navright li.navright__refresh:hover a {
   width: calc(100vw - 30px);
   height: calc(100vh - 80px);
   min-width: 710px;
-  min-height: 889px;
+  min-height: 847px;
   padding: 18px 15px 0 15px;
   background: #3A3D45;
   -webkit-transition: all 1s;
@@ -842,6 +862,11 @@ header.header .navright li.navright__refresh:hover a {
   height: 100px;
 }
 
+.mappinglist__folder .pic a img {
+  width: 130px;
+  height: 100px;
+}
+
 .mappinglist__folder .pic ul {
   position: absolute;
   bottom: -2px;
@@ -860,7 +885,7 @@ header.header .navright li.navright__refresh:hover a {
   margin-top: 20px;
   padding: 10px 0;
   border-top: 1px solid #2D3038;
-  min-height: 460px;
+  min-height: 440px;
   overflow-y: scroll;
   height: calc(100vh - 500px);
 }
@@ -872,6 +897,17 @@ header.header .navright li.navright__refresh:hover a {
   height: 100px;
   margin: 3px;
   border: 1px solid #2D3038;
+}
+
+.mappinglist__photo .pic.select:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130px;
+  height: 100px;
+  z-index: 100;
+  border: 3px solid #A40A0A;
 }
 
 .mappinglist .inputarea {
@@ -943,7 +979,7 @@ header.header .navright li.navright__refresh:hover a {
 }
 
 .userdetale__history {
-  min-height: 550px;
+  min-height: 530px;
   overflow-y: scroll;
   height: calc(100vh - 420px);
 }
@@ -958,6 +994,18 @@ header.header .navright li.navright__refresh:hover a {
 
 .userdetale__history .pic img {
   width: 120px;
+}
+
+.userdetale__history .pic.select:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120px;
+  height: 92px;
+  z-index: 100;
+  border: 3px solid #A40A0A;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .userdetale__info {
@@ -976,7 +1024,7 @@ header.header .navright li.navright__refresh:hover a {
 .userdetale__info .inputarea .label {
   color: #848991;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .userdetale__info .inputarea__text input {

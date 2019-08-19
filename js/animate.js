@@ -1,12 +1,4 @@
-// manage wrap 높이 계산
-$(function() {
-  var manageWrapHeight = $(window).height();  
-  $('#managewrap').css('height', manageWrapHeight - 80);  
-  $(window).resize(function(){
-    var manageWrapHeight = $(window).height();  
-    $('#managewrap').css('height', manageWrapHeight - 80);  
-  });
-});
+
 
 // content 가로 계산
 $(function() {
@@ -18,14 +10,17 @@ $(function() {
   });
 });
 
+
+
 $(function(){ 
   panelOpen = true;
-  var contentWidth = $('.content').width();
+  var contentWidth = $('.content').width();  
   $('.infomation__btn').click(function (e) { 
     e.preventDefault();
     if (panelOpen) {
       $(this).addClass('panelshow');
-      $('.infomation').stop(true,true).animate({'left':'0px'},500,function(){        
+      $('.infomation').stop(true,true).animate({'left':'0px'},500,function(){
+        $('.photos').removeClass('nonepanel');
         $('.photos').addClass('withpanel');
         $('.withpanel').css('width', contentWidth - 370); 
         panelOpen=false;
@@ -34,7 +29,8 @@ $(function(){
       $(this).removeClass('panelshow');
       $('.infomation').stop(true,true).animate({'left':'-370px'},500,function(){        
         $('.photos').removeClass('withpanel');
-        $('.photos').css('width', contentWidth); 
+        $('.photos').addClass('nonepanel');
+        $('.nonepanel').css('width', contentWidth); 
         panelOpen=true;
       });
     }
@@ -71,7 +67,7 @@ $(function(){ // mapping modal
   $('.detale-hide').on('click',function(){
     $('.userdetale').css('right', '-450px');
     $('.mappinglist').css('width', mappingWidth - 30);    
-  });
+  });                   
 });
 
 
